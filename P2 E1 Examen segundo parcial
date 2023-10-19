@@ -1,0 +1,22 @@
+#https://replit.com/join/cqozoucnvt-juan-pablop1870
+
+print("Este es un programa para pre diagnosticar pacientes por medio de sus sintomas temperatura y dias enfermo asegurese de poner los sintomas en minusculas y sin carateres extras \n")
+Temp = float(input("Ingresa tu temperatura corporal: "))
+Days = int(input("Ingresa el numero de dias que has estado enfermo: "))
+print("Posibles sintomas: tos, tos cronica, fatiga extrema, perdida de peso, dolor de garganta, dificultad para respirar ")
+Sintomas = input("Cuales son tus sintomas: ")
+print("Su pre diagnostico es:\n")
+if Temp > 38 and Sintomas == "dificultad para respirar": 
+  print("Infeccion respiratoria grave")
+elif Temp > 36.6 and Temp < 38 and (Sintomas == "tos" or Sintomas == "dolor de garganta"):
+  print("Infeccion respiratoria media")
+elif Temp > 36 and Temp <= 36.6 and Sintomas == "tos":
+  print("Infeccion respiratoria leve")
+elif Days > 7 and (Sintomas == "tos cronica" or Sintomas == "fatiga extrema" or Sintomas == "Perdida de peso"):
+  print("Enfermedad cronica")
+elif Temp >= 38:
+  print("Fiebre alta")
+elif Temp > 36.5 and Temp < 38:
+  print("Fiebre baja")
+elif Temp <= 36.6:
+  print("No tiene fiebre")
